@@ -1,0 +1,43 @@
+<app-layout pageTitle="Edit Seller">
+<div class="form-page">
+
+
+    <div class="form-card">
+
+        <h1>Edit Seller</h1>
+
+        <div class="form-group">
+
+            <label>Username</label>
+
+            <input type="text" [(ngModel)]="username">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Email</label>
+
+            <input type="email" [(ngModel)]="email">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>New Password</label>
+
+            <input type="password" [(ngModel)]="password" placeholder="Leave blank to keep existing password">
+
+        </div>
+
+        <button class="update-btn" (click)="updateSeller()">
+
+            Update Seller
+
+        </button>
+
+    </div>
+
+
+</div>
+</app-layout>

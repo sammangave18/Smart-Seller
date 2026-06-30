@@ -1,0 +1,93 @@
+<app-layout pageTitle="Dashboard">
+
+    <div class="dashboard-container">
+    
+    <div class="main-content">
+    
+        <div class="header">
+    
+            <h1>Welcome, {{ currentAdmin?.username }}</h1>
+    
+            <p>Manage your products and sellers efficiently.</p>
+    
+        </div>
+    
+        <!-- Statistics Cards -->
+    
+        <div class="cards">
+    
+            <div class="card">
+    
+                <h3>Total Products</h3>
+    
+                <h2>{{totalProducts}}</h2>
+    
+            </div>
+    
+            <div class="card">
+    
+                <h3>Total Sellers</h3>
+    
+                <h2>{{totalSellers}}</h2>
+    
+            </div>
+    
+            <div class="card">
+    
+                <h3>Revenue</h3>
+    
+                <h2>₹25,000</h2>
+    
+            </div>
+    
+        </div>
+    
+        <!-- Revenue Chart -->
+    
+        <div class="chart-card">
+    
+            <h2>Revenue Overview</h2>
+    
+            <canvas id="revenueChart"></canvas>
+    
+        </div>
+    
+        <!-- Bottom Section -->
+    
+        <div class="bottom-section">
+    
+            <div class="activity">
+    
+                <h2>Recent Activity</h2>
+    
+                <ul>
+    
+                    <li>New Product Added</li>
+    
+                    <li>Seller Registered</li>
+    
+                    <li>Product Updated</li>
+    
+                </ul>
+    
+            </div>
+    
+            <div class="quick-card">
+    
+                <h2>Quick Summary</h2>
+    
+                <p>✔ Products : {{totalProducts}}</p>
+    
+                <p>✔ Sellers : {{totalSellers}}</p>
+    
+                <p>✔ Revenue : ₹25,000</p>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    </div>
+    
+    </app-layout>

@@ -1,0 +1,67 @@
+<div class="layout-container">
+
+
+    <div class="sidebar">
+
+        <div class="logo">
+            Smart Seller
+        </div>
+
+        <ul>
+
+            <li (click)="goToDashboard()">
+                Dashboard
+            </li>
+
+            <li (click)="goToProducts()">
+                Products
+            </li>
+
+            <li (click)="goToSellers()">
+                Sellers
+            </li>
+
+            <li>
+                Reports
+            </li>
+
+            <li>
+                Settings
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="navbar">
+
+            <h2>{{pageTitle}}</h2>
+
+            <div class="nav-right">
+
+                <span class="admin-name">
+                    Admin
+                </span>
+
+                <button class="logout-btn" (click)="logout()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="page-content">
+
+            <ng-content></ng-content>
+
+        </div>
+
+    </div>
+
+
+</div>

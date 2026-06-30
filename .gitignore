@@ -1,0 +1,51 @@
+############################
+# Python
+############################
+
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+
+backend/env/
+backend/venv/
+backend/.venv/
+
+backend/.env
+
+backend/*.db
+backend/*.sqlite3
+
+backend/.pytest_cache/
+
+############################
+# Angular
+############################
+
+frontend/node_modules/
+
+frontend/dist/
+
+frontend/.angular/
+
+############################
+# VS Code
+############################
+
+.vscode/
+
+.idea/
+
+############################
+# OS
+############################
+
+.DS_Store
+
+Thumbs.db
+
+############################
+# Logs
+############################
+
+*.log

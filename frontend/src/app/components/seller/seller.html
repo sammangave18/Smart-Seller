@@ -1,0 +1,69 @@
+<app-layout pageTitle="Sellers">
+    <div class="product-page">
+        <div class="page-header">
+
+            <div>
+                <h1>Sellers</h1>
+                <p>Total Sellers: {{ seller.length }}</p>
+            </div>
+
+            <button class="add-btn" (click)="goToAddSeller()">
+
+                + Add Seller
+
+            </button>
+
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let seller of seller">
+
+                        <td>{{seller.id}}</td>
+
+                        <td>{{seller.username}}</td>
+
+                        <td>{{seller.email}}</td>
+
+                        <td class="action-buttons">
+
+                            <button class="edit-btn" (click)="toEditSeller(seller.id)">
+
+                                Edit
+
+                            </button>
+
+                            <button class="delete-btn" (click)="toDeleteSeller(seller.id)">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </div>
+</app-layout>

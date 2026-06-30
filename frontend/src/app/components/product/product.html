@@ -1,0 +1,69 @@
+<app-layout pageTitle="Products">
+
+    <div class="page-header">
+
+        <div>
+            <h1>Products</h1>
+            <p>Total Products: {{ products.length }}</p>
+        </div>
+
+        <button class="add-btn" (click)="goToAddProduct()">
+            + Add Product
+        </button>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let product of products">
+
+                    <td>{{product.id}}</td>
+
+                    <td>{{product.name}}</td>
+
+                    <td>
+                        ₹{{product.price}}
+                    </td>
+
+                    <td>
+                        {{product.description}}
+                    </td>
+
+                    <td class="action-buttons">
+
+                        <button class="edit-btn" (click)="toEditProduct(product.id)">
+                            Edit
+                        </button>
+
+                        <button class="delete-btn" (click)="toDeleteProduct(product.id)">
+                            Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</app-layout>

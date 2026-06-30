@@ -1,0 +1,89 @@
+.form-page {
+    min-height: 100vh;
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .form-card {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .form-card h1 {
+    color: #1e293b;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  }
+  
+  .form-group textarea {
+    min-height: 120px;
+    resize: none;
+  }
+  
+  .save-btn,
+  .update-btn {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .save-btn {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  }
+  
+  .update-btn {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+  }
+  
+  .save-btn:hover,
+  .update-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .form-card {
+      padding: 20px;
+    }
+  }
+  

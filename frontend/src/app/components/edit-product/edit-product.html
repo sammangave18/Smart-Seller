@@ -1,0 +1,44 @@
+
+<app-layout pageTitle="Edit Product">
+    <div class="form-page">
+
+
+    <div class="form-card">
+
+        <h1>Edit Product</h1>
+
+        <div class="form-group">
+
+            <label>Product Name</label>
+
+            <input type="text" [(ngModel)]="name">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Description</label>
+
+            <textarea [(ngModel)]="description">
+            </textarea>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Price</label>
+
+            <input type="number" [(ngModel)]="price">
+
+        </div>
+
+        <button class="update-btn" (click)="updateProduct()">
+
+            Update Product
+
+        </button>
+
+    </div>
+
+
+</div></app-layout>
