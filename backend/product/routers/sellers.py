@@ -9,7 +9,6 @@ router = APIRouter(tags=['Seller'])
 
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-print(pwd_context.hash("a"))
 @router.post('/seller')
 def create_seller(request: schemas.Seller, db: Session = Depends(get_db)):
     hashedpassword = pwd_context.hash(request.password)
