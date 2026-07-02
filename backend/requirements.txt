@@ -8,11 +8,10 @@
 # python-multipart
 
 fastapi
-uvicorn[standard]
-gunicorn
 sqlalchemy
+uvicorn
 pydantic
 bcrypt==4.0.1
-passlib[bcrypt]
-python-jose[cryptography]
+passlib==1.7.4
+python-jose
 python-multipart
