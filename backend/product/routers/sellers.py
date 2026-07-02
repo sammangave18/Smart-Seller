@@ -6,7 +6,6 @@ from ..database import get_db
 from passlib.context import CryptContext
 router = APIRouter(tags=['Seller'])
 
-
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 @router.post('/seller')
 def create_seller(request: schemas.Seller, db: Session = Depends(get_db)):
@@ -25,6 +24,7 @@ def show_seller(db: Session = Depends(get_db)):
     seller = db.query(models.Seller).all()
     return seller
 
+#new change
 @router.get('/seller/{id}')
 def seller(id, response: Response, db: Session = Depends(get_db)):
     seller = db.query(models.Seller).filter(models.Seller.id == id).first()
