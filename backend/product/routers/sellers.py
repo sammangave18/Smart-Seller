@@ -4,7 +4,6 @@ from ..import schemas
 from ..import models
 from ..database import get_db
 from passlib.context import CryptContext
-
 router = APIRouter(tags=['Seller'])
 
 
