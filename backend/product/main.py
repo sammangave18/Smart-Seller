@@ -23,6 +23,7 @@ app.add_middleware(
         "http://localhost:56597",
         "http://127.0.0.1:4200",
         "http://127.0.0.1:56597",
+        "https://orange-cliff-0e5230110.7.azurestaticapps.net"
     ],
     allow_credentials=True,
     allow_methods=["*"],

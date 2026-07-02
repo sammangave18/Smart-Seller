@@ -1,8 +1,18 @@
+# fastapi
+# sqlalchemy
+# uvicorn
+# pydantic
+# bcrypt
+# passlib
+# python-jose
+# python-multipart
+
 fastapi
+uvicorn[standard]
+gunicorn
 sqlalchemy
-uvicorn
 pydantic
 bcrypt
-passlib
-python-jose
+passlib[bcrypt]
+python-jose[cryptography]
 python-multipart
