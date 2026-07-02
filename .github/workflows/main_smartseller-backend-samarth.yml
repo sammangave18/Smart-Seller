@@ -18,8 +18,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Change to backend directory
-        run: cd backend
 
       - name: Set up Python version
         uses: actions/setup-python@v5
@@ -76,5 +74,5 @@ jobs:
         with:
           app-name: 'smartseller-backend-samarth'
           slot-name: 'Production'
-          package: backend
+          package: .
           
