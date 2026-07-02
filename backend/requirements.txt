@@ -12,7 +12,7 @@ uvicorn[standard]
 gunicorn
 sqlalchemy
 pydantic
-bcrypt
+bcrypt==4.0.1
 passlib[bcrypt]
 python-jose[cryptography]
 python-multipart
