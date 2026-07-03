@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AiService {
-  apiUrl = 'http://127.0.0.1:8000';
+  apiUrl = 'smartseller-backend-samarth-ecg7hfhecraxbqgk.centralindia-01.azurewebsites.net';
 
   constructor(private http: HttpClient) {}
 

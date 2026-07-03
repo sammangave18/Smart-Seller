@@ -6,7 +6,8 @@ import { Seller } from '../components/seller/seller';
   providedIn: 'root',
 })
 export class SellerService {
-  apiUrl = 'http://127.0.0.1:8000';
+  // apiUrl = 'http://127.0.0.1:8000';
+  apiUrl = 'smartseller-backend-samarth-ecg7hfhecraxbqgk.centralindia-01.azurewebsites.net';
 
   constructor(private http: HttpClient) {}
 

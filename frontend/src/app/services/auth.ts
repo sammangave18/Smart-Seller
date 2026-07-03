@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class Auth {
-  apiUrl = 'http://127.0.0.1:8000'; // Instead of hardcoding URLs everywhere.
+  apiUrl = 'smartseller-backend-samarth-ecg7hfhecraxbqgk.centralindia-01.azurewebsites.net'; // Instead of hardcoding URLs everywhere.
   constructor(private http: HttpClient) {}
   testApi() {
     return this.http.get(this.apiUrl + '/test'); //Observables for API communication.
