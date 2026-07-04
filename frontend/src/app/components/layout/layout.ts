@@ -28,4 +28,13 @@ export class Layout {
   logout() {
     this.sessionService.logout();
   }
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
 }

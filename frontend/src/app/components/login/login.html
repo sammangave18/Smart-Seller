@@ -1,57 +1,120 @@
-<!-- <h2>Login Page</h2> -->
-<!-- Interpolition Dyanamic binding -->
-<!-- <h2>{{title}}</h2>
-<h2>Welcome {{username}}</h2>
-<button (click)="login()">
-    Login
-</button> -->
-
 <div class="container">
 
+  <!-- Left Side -->
+
   <div class="left-panel">
+
     <div class="brand">
+
       <h1>Smart Seller</h1>
-      <p>Manage Products, Sellers & Business Operations Efficiently</p>
+
+      <p>
+        AI Powered Product & Seller Management Platform
+      </p>
+
     </div>
 
     <div class="features">
+
       <div class="feature-card">
-        <h3>📦 Product Management</h3>
-        <p>Create, update and manage products with ease.</p>
+
+        <div class="icon">📦</div>
+
+        <div>
+
+          <h3>Product Management</h3>
+
+          <p>
+            Create, edit and manage products with AI support.
+          </p>
+
+        </div>
+
       </div>
 
       <div class="feature-card">
-        <h3>👥 Seller Management</h3>
-        <p>Manage sellers and their business information.</p>
+
+        <div class="icon">👥</div>
+
+        <div>
+
+          <h3>Seller Management</h3>
+
+          <p>
+            Manage sellers securely using JWT Authentication.
+          </p>
+
+        </div>
+
       </div>
 
       <div class="feature-card">
-        <h3>🔐 Secure Authentication</h3>
-        <p>JWT based authentication with FastAPI backend.</p>
+
+        <div class="icon">⚡</div>
+
+        <div>
+
+          <h3>Fast & Secure</h3>
+
+          <p>
+            Angular + FastAPI + Azure Cloud
+          </p>
+
+        </div>
+
       </div>
+
     </div>
+
   </div>
+
+  <!-- Right Side -->
 
   <div class="right-panel">
 
     <div class="login-card">
 
+      <div class="logo-circle">
+
+        SS
+
+      </div>
+
       <h2>Welcome Back</h2>
-      <p class="subtitle">Login to your account</p>
+
+      <p class="subtitle">
+
+        Login to continue
+
+      </p>
 
       <div class="input-group">
+
         <label>Username</label>
+
         <input type="text" placeholder="Enter Username" [(ngModel)]="username">
+
       </div>
 
       <div class="input-group">
+
         <label>Password</label>
+
         <input type="password" placeholder="Enter Password" [(ngModel)]="password">
+
       </div>
 
       <button class="login-btn" (click)="login()">
+
         Login
+
       </button>
+
+      <div class="footer-text">
+
+        Smart Seller © 2026
+
+      </div>
 
     </div>
 

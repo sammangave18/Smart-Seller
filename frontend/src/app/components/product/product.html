@@ -1,69 +1,155 @@
 <app-layout pageTitle="Products">
 
-    <div class="page-header">
+    <div class="product-page">
 
-        <div>
-            <h1>Products</h1>
-            <p>Total Products: {{ products.length }}</p>
+        <!-- Header -->
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>📦 Products</h1>
+
+                <p>{{products.length}} Products Available</p>
+
+            </div>
+
+            <button class="add-btn" (click)="goToAddProduct()">
+
+                + Add Product
+
+            </button>
+
         </div>
 
-        <button class="add-btn" (click)="goToAddProduct()">
-            + Add Product
-        </button>
+        <!-- Search -->
 
-    </div>
+        <div class="search-box">
 
-    <div class="table-container">
+            <input type="text" placeholder="Search Product...">
 
-        <table>
+        </div>
 
-            <thead>
+        <!-- Desktop Table -->
 
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Description</th>
-                    <th>Action</th>
-                </tr>
+        <div class="table-container desktop-view">
 
-            </thead>
+            <table>
 
-            <tbody>
+                <thead>
 
-                <tr *ngFor="let product of products">
+                    <tr>
 
-                    <td>{{product.id}}</td>
+                        <th>ID</th>
 
-                    <td>{{product.name}}</td>
+                        <th>Name</th>
 
-                    <td>
+                        <th>Price</th>
+
+                        <th>Description</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let product of products">
+
+                        <td>{{product.id}}</td>
+
+                        <td>{{product.name}}</td>
+
+                        <td>
+
+                            <span class="price">
+
+                                ₹{{product.price}}
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            {{product.description}}
+
+                        </td>
+
+                        <td>
+
+                            <button class="edit-btn" (click)="toEditProduct(product.id)">
+
+                                Edit
+
+                            </button>
+
+                            <button class="delete-btn" (click)="toDeleteProduct(product.id)">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Mobile Cards -->
+
+        <div class="mobile-view">
+
+            <div class="product-card" *ngFor="let product of products">
+
+                <div class="card-top">
+
+                    <h2>
+
+                        {{product.name}}
+
+                    </h2>
+
+                    <span class="price">
+
                         ₹{{product.price}}
-                    </td>
 
-                    <td>
-                        {{product.description}}
-                    </td>
+                    </span>
 
-                    <td class="action-buttons">
+                </div>
 
-                        <button class="edit-btn" (click)="toEditProduct(product.id)">
-                            Edit
-                        </button>
+                <p>
 
-                        <button class="delete-btn" (click)="toDeleteProduct(product.id)">
-                            Delete
-                        </button>
+                    {{product.description}}
 
-                    </td>
+                </p>
 
-                </tr>
+                <div class="card-footer">
 
-            </tbody>
+                    <button class="edit-btn" (click)="toEditProduct(product.id)">
 
-        </table>
+                        Edit
+
+                    </button>
+
+                    <button class="delete-btn" (click)="toDeleteProduct(product.id)">
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
 
 </app-layout>

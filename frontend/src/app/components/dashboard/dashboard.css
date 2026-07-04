@@ -1,52 +1,135 @@
-/* =========================
-HEADER
-========================= */
+.dashboard {
+  display: flex;
 
-.header {
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+/* Welcome */
+
+.welcome-card {
   background: white;
 
   padding: 25px;
 
-  border-radius: 18px;
+  border-radius: 20px;
 
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
 
-  margin-bottom: 25px;
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
 }
 
-.header h1 {
+.welcome-card h1 {
+  font-size: 30px;
+
   color: #1e293b;
 
   margin-bottom: 8px;
 }
 
-.header p {
+.welcome-card p {
   color: #64748b;
 }
 
-/* =========================
-  DASHBOARD CARDS
-  ========================= */
+.date-card {
+  background: #2563eb;
 
-.cards {
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+}
+
+/* Stats */
+
+.stats-grid {
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
   gap: 20px;
-
-  margin-bottom: 25px;
 }
-.chart-card {
-  margin-bottom: 25px;
 
-  background: #fff;
+.stat-card {
+  background: white;
 
-  padding: 25px;
+  padding: 22px;
 
   border-radius: 18px;
 
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.stat-card h2 {
+  font-size: 32px;
+
+  margin-bottom: 5px;
+
+  color: #111827;
+}
+
+.stat-card p {
+  color: #64748b;
+}
+
+.products {
+  border-left: 6px solid #3b82f6;
+}
+
+.sellers {
+  border-left: 6px solid #22c55e;
+}
+
+.revenue {
+  border-left: 6px solid #f59e0b;
+}
+
+.orders {
+  border-left: 6px solid #ec4899;
+}
+
+/* Charts */
+
+.chart-section {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 20px;
+}
+
+.chart-card {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .chart-card canvas {
@@ -55,105 +138,104 @@ HEADER
   height: 350px !important;
 }
 
-.bottom-section {
-  display: grid;
-
-  grid-template-columns: 2fr 1fr;
-
-  gap: 20px;
-
-  margin-top: 25px;
-}
-
-.quick-card {
-  background: #fff;
+.summary-card {
+  background: white;
 
   padding: 25px;
 
-  border-radius: 18px;
+  border-radius: 20px;
 
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
-.quick-card h2 {
+.summary-card h2 {
   margin-bottom: 20px;
-
-  color: #1e293b;
 }
 
-.quick-card p {
-  margin-bottom: 12px;
+.summary-item {
+  display: flex;
 
-  font-size: 16px;
+  justify-content: space-between;
 
-  color: #475569;
+  padding: 14px 0;
+
+  border-bottom: 1px solid #eee;
 }
 
-@media (max-width: 900px) {
-  .bottom-section {
-    grid-template-columns: 1fr;
-  }
-}
-.card {
-  background: white;
+/* Activity */
 
-  border-radius: 18px;
-
-  padding: 25px;
-
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card h3 {
-  color: #64748b;
-
-  margin-bottom: 10px;
-}
-
-.card h2 {
-  color: #0f172a;
-
-  font-size: 34px;
-}
-
-/* =========================
-  RECENT ACTIVITY
-  ========================= */
-
-.activity {
+.activity-card {
   background: white;
 
   padding: 25px;
 
-  border-radius: 18px;
+  border-radius: 20px;
 
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
-.activity h2 {
-  color: #1e293b;
-
-  margin-bottom: 15px;
+.activity-card h2 {
+  margin-bottom: 18px;
 }
 
-.activity ul {
+.activity-card ul {
   list-style: none;
 }
 
-.activity li {
-  padding: 15px;
+.activity-card li {
+  padding: 14px;
 
-  border-bottom: 1px solid #e5e7eb;
-
-  color: #475569;
+  border-bottom: 1px solid #eee;
 }
 
-.activity li:last-child {
-  border-bottom: none;
+/* Mobile */
+
+@media (max-width: 992px) {
+  .chart-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .welcome-card h1 {
+    font-size: 24px;
+  }
+
+  .date-card {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .stat-card {
+    padding: 18px;
+  }
+
+  .icon {
+    font-size: 34px;
+  }
+
+  .stat-card h2 {
+    font-size: 26px;
+  }
+
+  .chart-card canvas {
+    height: 250px !important;
+  }
+
+  .summary-card {
+    padding: 18px;
+  }
+
+  .activity-card {
+    padding: 18px;
+  }
 }

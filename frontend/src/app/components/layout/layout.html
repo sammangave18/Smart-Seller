@@ -1,49 +1,92 @@
 <div class="layout-container">
 
+    <!-- Overlay -->
 
-    <div class="sidebar">
+    <div class="overlay" *ngIf="menuOpen" (click)="toggleMenu()">
+    </div>
 
+    <!-- Sidebar -->
+
+    <aside class="sidebar" [class.open]="menuOpen">
+        <button class="menu-btn" (click)="closeMenu()">
+
+            X
+
+        </button>
         <div class="logo">
+
+            <span>🚀</span>
+
             Smart Seller
+
         </div>
 
         <ul>
 
-            <li (click)="goToDashboard()">
-                Dashboard
+            <li (click)="goToDashboard();closeMenu()">
+
+                📊 Dashboard
+
             </li>
 
-            <li (click)="goToProducts()">
-                Products
+            <li (click)="goToProducts();closeMenu()">
+
+                📦 Products
+
             </li>
 
-            <li (click)="goToSellers()">
-                Sellers
+            <li (click)="goToSellers();closeMenu()">
+
+                👥 Sellers
+
             </li>
 
             <li>
-                Reports
+
+                📈 Reports
+
             </li>
 
             <li>
-                Settings
+
+                ⚙ Settings
+
             </li>
 
         </ul>
 
-    </div>
+    </aside>
+
+    <!-- Main -->
 
     <div class="main-content">
 
-        <div class="navbar">
+        <nav class="navbar">
 
-            <h2>{{pageTitle}}</h2>
+            <div class="left-nav">
+
+                <button class="menu-btn" (click)="toggleMenu()">
+
+                    ☰
+
+                </button>
+
+
+                <h2>
+
+                    {{pageTitle}}
+
+                </h2>
+
+            </div>
 
             <div class="nav-right">
 
-                <span class="admin-name">
-                    Admin
-                </span>
+                <div class="admin">
+
+                    👤 Admin
+
+                </div>
 
                 <button class="logout-btn" (click)="logout()">
 
@@ -53,7 +96,7 @@
 
             </div>
 
-        </div>
+        </nav>
 
         <div class="page-content">
 
@@ -62,6 +105,5 @@
         </div>
 
     </div>
-
 
 </div>

@@ -1,93 +1,162 @@
 <app-layout pageTitle="Dashboard">
 
-    <div class="dashboard-container">
-    
-    <div class="main-content">
-    
-        <div class="header">
-    
-            <h1>Welcome, {{ currentAdmin?.username }}</h1>
-    
-            <p>Manage your products and sellers efficiently.</p>
-    
+    <div class="dashboard">
+
+        <!-- Welcome -->
+
+        <div class="welcome-card">
+
+            <div>
+
+                <h1>Welcome {{currentAdmin?.username}} 👋</h1>
+
+                <p>Monitor your Smart Seller business from one place.</p>
+
+            </div>
+
+            <div class="date-card">
+
+                <!-- {{today | date:'dd MMM yyyy'}} -->
+                date: 4-7-26
+
+            </div>
+
         </div>
-    
-        <!-- Statistics Cards -->
-    
-        <div class="cards">
-    
-            <div class="card">
-    
-                <h3>Total Products</h3>
-    
-                <h2>{{totalProducts}}</h2>
-    
+
+        <!-- KPI Cards -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card products">
+
+                <div class="icon">📦</div>
+
+                <div>
+
+                    <h2>{{totalProducts}}</h2>
+
+                    <p>Total Products</p>
+
+                </div>
+
             </div>
-    
-            <div class="card">
-    
-                <h3>Total Sellers</h3>
-    
-                <h2>{{totalSellers}}</h2>
-    
+
+            <div class="stat-card sellers">
+
+                <div class="icon">👥</div>
+
+                <div>
+
+                    <h2>{{totalSellers}}</h2>
+
+                    <p>Total Sellers</p>
+
+                </div>
+
             </div>
-    
-            <div class="card">
-    
-                <h3>Revenue</h3>
-    
-                <h2>₹25,000</h2>
-    
+
+            <div class="stat-card revenue">
+
+                <div class="icon">💰</div>
+
+                <div>
+
+                    <h2>₹25,000</h2>
+
+                    <p>Total Revenue</p>
+
+                </div>
+
             </div>
-    
+
+            <div class="stat-card orders">
+
+                <div class="icon">📈</div>
+
+                <div>
+
+                    <h2>128</h2>
+
+                    <p>Total Orders</p>
+
+                </div>
+
+            </div>
+
         </div>
-    
-        <!-- Revenue Chart -->
-    
-        <div class="chart-card">
-    
-            <h2>Revenue Overview</h2>
-    
-            <canvas id="revenueChart"></canvas>
-    
-        </div>
-    
-        <!-- Bottom Section -->
-    
-        <div class="bottom-section">
-    
-            <div class="activity">
-    
-                <h2>Recent Activity</h2>
-    
-                <ul>
-    
-                    <li>New Product Added</li>
-    
-                    <li>Seller Registered</li>
-    
-                    <li>Product Updated</li>
-    
-                </ul>
-    
+
+        <!-- Charts -->
+
+        <div class="chart-section">
+
+            <div class="chart-card">
+
+                <h2>Revenue Overview</h2>
+
+                <canvas id="revenueChart"></canvas>
+
             </div>
-    
-            <div class="quick-card">
-    
+
+            <div class="summary-card">
+
                 <h2>Quick Summary</h2>
-    
-                <p>✔ Products : {{totalProducts}}</p>
-    
-                <p>✔ Sellers : {{totalSellers}}</p>
-    
-                <p>✔ Revenue : ₹25,000</p>
-    
+
+                <div class="summary-item">
+
+                    <span>Products</span>
+
+                    <strong>{{totalProducts}}</strong>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span>Sellers</span>
+
+                    <strong>{{totalSellers}}</strong>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span>Revenue</span>
+
+                    <strong>₹25,000</strong>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span>Orders</span>
+
+                    <strong>128</strong>
+
+                </div>
+
             </div>
-    
+
         </div>
-    
+
+        <!-- Activity -->
+
+        <div class="activity-card">
+
+            <h2>Recent Activity</h2>
+
+            <ul>
+
+                <li>✅ New Product Added</li>
+
+                <li>👤 New Seller Registered</li>
+
+                <li>✏ Product Updated</li>
+
+                <li>🗑 Product Deleted</li>
+
+            </ul>
+
+        </div>
+
     </div>
-    
-    </div>
-    
-    </app-layout>
+
+</app-layout>
